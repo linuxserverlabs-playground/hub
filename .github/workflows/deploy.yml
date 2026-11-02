@@ -1,0 +1,26 @@
+# Ingest every release the data lacks, publish the data branch, and deploy the API and the generated artefacts to
+# Pages, with the main hub's code (its deploy-run.yml). Labs leaves out the stores and the mods index.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [image-released]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    uses: linuxserver-playground/hub/.github/workflows/deploy-run.yml@main
+    with:
+      generators: docs,proxy,kubernetes,quadlet,builds
+    secrets: inherit

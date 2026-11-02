@@ -1,0 +1,24 @@
+# The hourly refresh with the main hub's code (its refresh-run.yml): stars and archived flags. Labs has no mods,
+# PRoot Apps or stores. The control plane dispatches it hourly too, because GitHub skips many runs of an hourly cron.
+name: Refresh
+
+on:
+  schedule:
+    - cron: '47 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  pages: read
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    uses: linuxserver-playground/hub/.github/workflows/refresh-run.yml@main
+    with:
+      indexes: false
+    secrets: inherit
