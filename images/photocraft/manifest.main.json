@@ -1,0 +1,104 @@
+{
+ "schema": 1,
+ "name": "photocraft",
+ "summary": "[PhotoCraft](https://getartcraft.com/apps/photocraft) is an open source photo and image editor written from scratch in Rust, part of the [ArtCraft](https://getartcraft.com/) suite: layers, masks, adjustment layers, filters and raw import in a fast native interface.",
+ "upstream": {
+  "url": "https://getartcraft.com/apps/photocraft",
+  "version": {
+   "type": "github_release",
+   "repo": "storytold/photocraft",
+   "require_assets": [
+    {
+     "asset": "^photocraft\\-.*\\-linux\\-x86_64\\.deb$"
+    },
+    {
+     "asset": "^photocraft\\-.*\\-linux\\-aarch64\\.deb$"
+    }
+   ]
+  },
+  "notes": {
+   "type": "github_release",
+   "repo": "storytold/photocraft"
+  }
+ },
+ "release": {
+  "branch": "main",
+  "tag": "latest",
+  "channel": "stable"
+ },
+ "build": {
+  "base": "selkies",
+  "version_arg": "PHOTOCRAFT_RELEASE",
+  "platforms": [
+   "amd64",
+   "arm64"
+  ]
+ },
+ "test": {
+  "startup_timeout": 120,
+  "env": {
+   "TZ": "US/Pacific"
+  },
+  "web": {
+   "port": 3001,
+   "scheme": "https",
+   "auth": "user:password",
+   "screenshot_delay": 30
+  }
+ },
+ "runtime": {
+  "ports": [
+   {
+    "internal": "3000",
+    "description": "PhotoCraft desktop gui HTTP, must be proxied."
+   },
+   {
+    "internal": "3001",
+    "description": "PhotoCraft desktop gui HTTPS."
+   }
+  ],
+  "volumes": [
+   {
+    "path": "/config",
+    "host_path": "/path/to/photocraft/config",
+    "description": "Users home directory in the container, stores local files and settings"
+   }
+  ],
+  "custom": [
+   {
+    "flag": "shm-size",
+    "compose": "shm_size",
+    "value": "1gb",
+    "description": "Recommended for all desktop images."
+   }
+  ]
+ },
+ "docs": {
+  "categories": [
+   "Image Editor"
+  ],
+  "logo": "https://raw.githubusercontent.com/storytold/photocraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.photocraft.png",
+  "setup": "The application can be accessed at:\n\n* https://yourhost:3001/\n",
+  "notices": {
+   "strict_proxy": true,
+   "selkies": {
+    "enabled": true,
+    "nvidia": true
+   }
+  }
+ },
+ "proxy": {
+  "port": 3001,
+  "scheme": "https",
+  "subdomain": true,
+  "subfolder": {
+   "supported": false
+  }
+ },
+ "changelog": [
+  {
+   "date": "2026-11-02",
+   "text": "Initial release."
+  }
+ ]
+}
