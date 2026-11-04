@@ -1,0 +1,17 @@
+{
+ "fetched_at": "2026-11-04T00:31:13.093Z",
+ "images": {
+  "filmcraft": {
+   "url": "https://github.com/linuxserverlabs-playground/docker-filmcraft",
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-11-02T18:55:32Z"
+  },
+  "photocraft": {
+   "url": "https://github.com/linuxserverlabs-playground/docker-photocraft",
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-11-03T02:03:14Z"
+  }
+ }
+}

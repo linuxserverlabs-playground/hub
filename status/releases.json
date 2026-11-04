@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "checked_at": "2026-11-03T23:31:28.245Z",
+ "fetched_at": "2026-11-02T17:44:25.911Z",
+ "error": "docker-filmcraft: no image.yml on main"
+}
