@@ -1,0 +1,103 @@
+{
+ "image": "photocraft",
+ "branch": "main",
+ "tag": "v0.19.0-ls1",
+ "previous_tag": null,
+ "classification": "initial",
+ "reasons": [
+  "first build of this branch in the hub"
+ ],
+ "upstream": {
+  "from": null,
+  "to": "v0.19.0",
+  "changed": false
+ },
+ "commit": {
+  "from": null,
+  "to": "291202b2d1f6df511f368bc3f390c3a00f8828a5",
+  "changed": false,
+  "compare_url": null
+ },
+ "trigger": "push",
+ "base": {
+  "from": null,
+  "to": {
+   "family": "selkies",
+   "image": "ghcr.io/linuxserver-playground/baseimage-selkies:ubunturesolute",
+   "digest": "sha256:40830db5ae0f2c8f89f3779f7946fcfa07a190c5a97c4fac8dfbf05272072d41"
+  },
+  "changed": false
+ },
+ "size": {
+  "amd64": {
+   "from": null,
+   "to": 1084465251,
+   "delta": null
+  },
+  "arm64": {
+   "from": null,
+   "to": 1044330069,
+   "delta": null
+  }
+ },
+ "config": {
+  "env": {
+   "added": [
+    "DISABLE_DRI3",
+    "DISPLAY",
+    "HOME",
+    "LANG",
+    "LANGUAGE",
+    "LSIO_FIRST_PARTY",
+    "NO_GAMEPAD",
+    "NVIDIA_DRIVER_CAPABILITIES",
+    "PATH",
+    "PERL5LIB",
+    "PIXELFLUX_WAYLAND",
+    "PULSE_RUNTIME_PATH",
+    "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+    "S6_STAGE2_HOOK",
+    "S6_VERBOSITY",
+    "SELKIES_ALLOWED_ORIGINS",
+    "SELKIES_ENABLE_BASIC_AUTH",
+    "SELKIES_ENCODER",
+    "SELKIES_INTERPOSER",
+    "SELKIES_RATE_CONTROL_MODE",
+    "SELKIES_VIDEO_STREAMING_MODE",
+    "SELKIES_WEBCAM_INTERPOSER",
+    "SHELL",
+    "START_DOCKER",
+    "TERM",
+    "TITLE",
+    "VIRTUAL_ENV",
+    "__GL_SYNC_TO_VBLANK"
+   ],
+   "removed": [],
+   "changed": []
+  },
+  "exposed_ports": {
+   "added": [
+    "3000/tcp",
+    "3001/tcp"
+   ],
+   "removed": []
+  },
+  "volumes": {
+   "added": [
+    "/config"
+   ],
+   "removed": []
+  }
+ },
+ "dockerfile": {
+  "amd64": "",
+  "arm64": ""
+ },
+ "packages": null,
+ "totals": {
+  "added": 0,
+  "removed": 0,
+  "upgraded": 0,
+  "downgraded": 0
+ }
+}

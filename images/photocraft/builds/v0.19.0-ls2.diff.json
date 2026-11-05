@@ -1,0 +1,106 @@
+{
+ "image": "photocraft",
+ "branch": "main",
+ "tag": "v0.19.0-ls2",
+ "previous_tag": "v0.19.0-ls1",
+ "classification": "none",
+ "reasons": [
+  "2 commits (291202b → 5774df8): changed generated files, the package table"
+ ],
+ "upstream": {
+  "from": "v0.19.0",
+  "to": "v0.19.0",
+  "changed": false
+ },
+ "commit": {
+  "from": "291202b2d1f6df511f368bc3f390c3a00f8828a5",
+  "to": "5774df82e53f98d4b8f377085cda7b5742b39eb7",
+  "changed": true,
+  "compare_url": "https://github.com/linuxserverlabs-playground/docker-photocraft/compare/291202b2d1f6df511f368bc3f390c3a00f8828a5...5774df82e53f98d4b8f377085cda7b5742b39eb7",
+  "commits": [
+   {
+    "sha": "1f473240494dff2ab5ed63994cb1e4bb21dca05e",
+    "subject": "Update package versions [skip ci]",
+    "author": {
+     "name": "github-actions[bot]",
+     "login": "github-actions[bot]"
+    },
+    "date": "2026-11-02T17:31:43Z",
+    "url": "https://github.com/linuxserverlabs-playground/docker-photocraft/commit/1f473240494dff2ab5ed63994cb1e4bb21dca05e",
+    "bot": true
+   },
+   {
+    "sha": "5774df82e53f98d4b8f377085cda7b5742b39eb7",
+    "subject": "Regenerate with the secrets passed by name and the Labs site's links",
+    "author": {
+     "name": "thelamer",
+     "login": "thelamer"
+    },
+    "date": "2026-11-02T17:36:35Z",
+    "url": "https://github.com/linuxserverlabs-playground/docker-photocraft/commit/5774df82e53f98d4b8f377085cda7b5742b39eb7",
+    "bot": false
+   }
+  ],
+  "count": 2,
+  "truncated": false,
+  "areas": {
+   "generated": 3,
+   "packages": 1
+  }
+ },
+ "trigger": "push",
+ "base": {
+  "from": {
+   "family": "selkies",
+   "image": "ghcr.io/linuxserver-playground/baseimage-selkies:ubunturesolute",
+   "digest": "sha256:40830db5ae0f2c8f89f3779f7946fcfa07a190c5a97c4fac8dfbf05272072d41"
+  },
+  "to": {
+   "family": "selkies",
+   "image": "ghcr.io/linuxserver-playground/baseimage-selkies:ubunturesolute",
+   "digest": "sha256:40830db5ae0f2c8f89f3779f7946fcfa07a190c5a97c4fac8dfbf05272072d41"
+  },
+  "changed": false
+ },
+ "size": {
+  "amd64": {
+   "from": 1084465251,
+   "to": 1084465085,
+   "delta": -166
+  },
+  "arm64": {
+   "from": 1044330069,
+   "to": 1044330210,
+   "delta": 141
+  }
+ },
+ "config": {
+  "env": {
+   "added": [],
+   "removed": [],
+   "changed": []
+  },
+  "exposed_ports": {
+   "added": [],
+   "removed": []
+  },
+  "volumes": {
+   "added": [],
+   "removed": []
+  }
+ },
+ "dockerfile": {
+  "amd64": "",
+  "arm64": ""
+ },
+ "packages": {
+  "amd64": {},
+  "arm64": {}
+ },
+ "totals": {
+  "added": 0,
+  "removed": 0,
+  "upgraded": 0,
+  "downgraded": 0
+ }
+}
