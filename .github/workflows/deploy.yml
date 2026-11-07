@@ -1,19 +1,19 @@
-# Ingest every release the data lacks, publish the data branch, and deploy the API and the generated artefacts to
-# Pages, with the main hub's code (its deploy-run.yml). Labs leaves out the stores and the mods index.
+# Ingest every release the data lacks, publish the data branch, and publish the API and the generated artefacts to
+# Pages from the gh-pages branch, with the main hub's code (its deploy-run.yml). Labs leaves out the stores and the
+# mods index. Only the Labs control plane starts it, on its slots (control's deploys.py).
 name: Deploy
 
 on:
-  push:
-    branches: [main]
-  repository_dispatch:
-    types: [image-released]
   workflow_dispatch:
+    inputs:
+      force:
+        description: Comma-separated owner/repo@tag releases to ingest again even when held
+        type: string
+        default: ''
 
 permissions:
   contents: write
   pages: write
-  id-token: write
-  actions: read
 
 concurrency:
   group: pages
@@ -24,4 +24,5 @@ jobs:
     uses: linuxserver-playground/hub/.github/workflows/deploy-run.yml@main
     with:
       generators: docs,proxy,kubernetes,quadlet,builds
+      force: ${{ inputs.force }}
     secrets: inherit
