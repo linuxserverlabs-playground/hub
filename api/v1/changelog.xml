@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LinuxServer.io image changelog</title>
+  <subtitle>Notable changes to LinuxServer.io container images.</subtitle>
+  <id>https://linuxserverlabs-playground.github.io/hub/api/v1/changelog.xml</id>
+  <link rel="self" href="https://linuxserverlabs-playground.github.io/hub/api/v1/changelog.xml"/>
+  <link rel="alternate" href="https://linuxserverlabs-playground.github.io/hub/"/>
+  <updated>2026-11-02T17:44:25.911Z</updated>
+  <author><name>LinuxServer.io</name></author>
+  <entry>
+    <id>urn:sha1:fb37d0cde0bf711d3b34dbbd3e9821ec178ffc83</id>
+    <title>photocraft: Initial release.</title>
+    <updated>2026-11-02T00:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/linuxserverlabs-playground/docker-photocraft#versions"/>
+    <category term="photocraft"/>
+    <content type="text">Initial release.</content>
+  </entry>
+</feed>
